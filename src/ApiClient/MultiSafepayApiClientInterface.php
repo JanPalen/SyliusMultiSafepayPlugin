@@ -42,7 +42,12 @@ interface MultiSafepayApiClientInterface
 
     public const STATUS_VOID = 'void';
 
-    public function initialise(string $apiKey, string $type, bool $sandbox = true, bool $allowMultiCurrency = false): void;
+    public function initialise(
+        string $apiKey,
+        string $type,
+        bool $sandbox = true,
+        bool $allowMultiCurrency = false
+    ): void;
 
     public function createPayment(array $data): Orders;
 
@@ -50,7 +55,11 @@ interface MultiSafepayApiClientInterface
 
     public function getType(): string;
 
-    public function refund(string $orderId, int $amount, string $currencyCode): void;
+    public function refund(
+        string $orderId,
+        int $amount,
+        string $currencyCode
+    ): void;
 
     public function isPaymentActive(string $status): bool;
 

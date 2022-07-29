@@ -24,8 +24,12 @@ class MultiSafepayApiClient implements MultiSafepayApiClientInterface
     /** @var bool */
     private $allowMultiCurrency;
 
-    public function initialise(string $apiKey, string $type, bool $sandbox = true, bool $allowMultiCurrency = false): void
-    {
+    public function initialise(
+        string $apiKey,
+        string $type,
+        bool $sandbox = true,
+        bool $allowMultiCurrency = false
+    ): void {
         $this->type = $type;
         $this->allowMultiCurrency = $allowMultiCurrency;
 
@@ -58,8 +62,11 @@ class MultiSafepayApiClient implements MultiSafepayApiClientInterface
         return $this->allowMultiCurrency;
     }
 
-    public function refund(string $orderId, int $amount, string $currencyCode): void
-    {
+    public function refund(
+        string $orderId,
+        int $amount,
+        string $currencyCode
+    ): void {
         $endpoint = sprintf('orders/%s/refunds', $orderId);
 
         $this->client->orders->post([

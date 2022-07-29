@@ -24,6 +24,7 @@ use Sylius\Component\Core\Model\PaymentInterface;
 final class StatusAction implements ActionInterface, GatewayAwareInterface, ApiAwareInterface
 {
     use GatewayAwareTrait;
+
     use ApiAwareTrait;
 
     public function execute($request): void
@@ -45,7 +46,7 @@ final class StatusAction implements ActionInterface, GatewayAwareInterface, ApiA
 
         if (isset($httpRequest->query['type']) && MultiSafepayApiClientInterface::STATUS_CANCEL === $httpRequest->query['type']) {
             $details['status'] = MultiSafepayApiClientInterface::STATUS_CANCELED;
-        } elseif ($details['status'] !== MultiSafepayApiClientInterface::STATUS_CANCELED) {
+        } elseif (MultiSafepayApiClientInterface::STATUS_CANCELED !== $details['status']) {
             $order = $this->multiSafepayApiClient->getOrderById($details['orderId']);
 
             $details['status'] = $order->status;
