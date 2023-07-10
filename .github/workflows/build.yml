@@ -11,16 +11,16 @@ on:
 
 jobs:
     tests:
-        runs-on: ubuntu-18.04
+        runs-on: ubuntu-22.04
 
         name: "Sylius ${{ matrix.sylius }}, PHP ${{ matrix.php }}, Symfony ${{ matrix.symfony }}, MySQL ${{ matrix.mysql }}"
 
         strategy:
             fail-fast: false
             matrix:
-                php: [7.4, 8.0]
+                php: [8.0]
                 symfony: [^4.4, ^5.2]
-                sylius: [~1.9, ~1.10, ~1.11]
+                sylius: [~1.11]
                 node: [14.x]
                 mysql: [8.0]
 
