@@ -6,7 +6,8 @@
     "license": "MIT",
     "require": {
         "php": "^7.4 || ^8.0",
-        "doctrine/annotations": "^1.1 || ^2.0",
+        "doctrine/annotations": "^1.13",
+        "friendsofphp/php-cs-fixer": "^3.14",
         "multisafepay/api": "^2.0",
         "php-http/message-factory": "^1.1",
         "sylius/sylius": "~1.9.0 || ~1.10.0 || ~1.11.0"
