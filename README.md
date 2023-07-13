@@ -6,7 +6,7 @@
 
 [ ![](https://img.shields.io/packagist/l/bitbag/multisafepay-plugin.svg) ](https://packagist.org/packages/bitbag/multisafepay-plugin "License") 
 [ ![](https://img.shields.io/packagist/v/bitbag/multisafepay-plugin.svg) ](https://packagist.org/packages/bitbag/multisafepay-plugin "Version") 
-[ ![](https://travis-ci.org/BitBagCommerce/SyliusMultiSafepayPlugin.svg?branch=master) ](https://travis-ci.org/BitBagCommerce/SyliusMultiSafepayPlugin "Build status")
+[_![](https://github.com/BitBagCommerce/SyliusMultiSafepayPlugin/actions/workflows/build.yml/badge.svg?branch=master)](https://github.com/BitBagCommerce/SyliusMultiSafepayPlugin/actions/workflows/build.yml "Build status")
 [ ![](https://img.shields.io/scrutinizer/g/BitBagCommerce/SyliusBraintreePlugin.svg) ](https://scrutinizer-ci.com/g/BitBagCommerce/SyliusMultiSafepayPlugin "Scrutinizer") 
 [ ![](https://poser.pugx.org/bitbag/multisafepay-plugin/downloads)](https://packagist.org/packages/bitbag/multisafepay-plugin "Total Downloads") 
 [ ![Slack](https://img.shields.io/badge/community%20chat-slack-FF1493.svg)](http://sylius-devs.slack.com) 
