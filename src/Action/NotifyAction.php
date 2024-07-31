@@ -32,15 +32,11 @@ final class NotifyAction implements ActionInterface, ApiAwareInterface, GatewayA
 {
     use GatewayAwareTrait, ApiAwareTrait;
 
-    /** @var LoggerInterface */
-    private $logger;
-
     /** @var FactoryInterface */
     private $stateMachineFactory;
 
-    public function __construct(LoggerInterface $logger, FactoryInterface $stateMachineFactory)
+    public function __construct(FactoryInterface $stateMachineFactory)
     {
-        $this->logger = $logger;
         $this->stateMachineFactory = $stateMachineFactory;
     }
 

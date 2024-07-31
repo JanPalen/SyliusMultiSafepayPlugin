@@ -27,17 +27,12 @@ final class RefundPaymentProcessor implements PaymentProcessorInterface
     /** @var MultiSafepayApiClientInterface */
     private $multiSafepayApiClient;
 
-    /** @var LoggerInterface */
-    private $logger;
-
     public function __construct(
         Session $session,
         MultiSafepayApiClientInterface $multiSafepayApiClient,
-        LoggerInterface $logger
     ) {
         $this->session = $session;
         $this->multiSafepayApiClient = $multiSafepayApiClient;
-        $this->logger = $logger;
     }
 
     public function process(PaymentInterface $payment): void
