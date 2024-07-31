@@ -21,6 +21,7 @@ use Payum\Core\GatewayAwareTrait;
 use Payum\Core\Reply\HttpResponse;
 use Payum\Core\Request\GetHttpRequest;
 use Payum\Core\Request\Notify;
+use Psr\Log\LoggerInterface;
 use SM\Factory\FactoryInterface;
 use Sylius\Bundle\PayumBundle\Model\GatewayConfigInterface;
 use Sylius\Component\Core\Model\OrderInterface;
@@ -32,11 +33,15 @@ final class NotifyAction implements ActionInterface, ApiAwareInterface, GatewayA
 {
     use GatewayAwareTrait, ApiAwareTrait;
 
+    /** @var LoggerInterface */
+    private $logger;
+
     /** @var FactoryInterface */
     private $stateMachineFactory;
 
-    public function __construct(FactoryInterface $stateMachineFactory)
+    public function __construct(LoggerInterface $logger, FactoryInterface $stateMachineFactory)
     {
+        $this->logger = $logger;
         $this->stateMachineFactory = $stateMachineFactory;
     }
 
